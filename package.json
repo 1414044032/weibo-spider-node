@@ -1,0 +1,17 @@
+{
+  "name": "weibo-spider-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "log4js": "^6.1.0",
+    "puppeteer": "^2.0.0"
+  }
+}

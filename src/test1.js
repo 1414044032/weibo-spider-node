@@ -38,7 +38,7 @@ async function search_keyword(page, keyword) {
     await page.focus('.search-input>input');
     await page.keyboard.sendCharacter(keyword);
     await page.click('.s-btn-b')
-    await page.screenshot({path: 'example.png'});
+    // await page.screenshot({path: 'example.png'});
 }
 
 // 提取
@@ -186,7 +186,7 @@ async function login(page) {
     return tempTag
 }
 
-async function main() {
+async function test1() {
     logger.debug("主函数运行");
     const browser = await open_browser();
     const page = await open_page(browser);
@@ -199,4 +199,4 @@ async function main() {
     }
 }
 
-main();
+test1();

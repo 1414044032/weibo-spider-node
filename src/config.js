@@ -1,5 +1,5 @@
 module.exports = {
     username: '18404975197' ,
-    password : '.......',
+    password : '。。。。。。',
     headless : false,
 };

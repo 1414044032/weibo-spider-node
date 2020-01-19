@@ -1,13 +1,14 @@
 let config = require("./config");
 let core = require('./core');
 const log4js = require('log4js');
+const cheerio = require('cheerio');
 const fs = require("fs");
 let logger = log4js.getLogger();
 // 日志级别
 logger.level = 'debug';
 
 class Weibo {
-    constructor(username, password, start_url, type = 'search') {
+    constructor(username, password, start_url, type = 'search', total = 2) {
         // 用户名
         this.username = username;
         // 密码
@@ -19,8 +20,11 @@ class Weibo {
         // 登录标记C
         this.loginStatusN = false;// 重试标记
         this.loginRetryCounts = 0;
-        this.start_url = null;
+        this.start_url = start_url;
+        this.total = total;
+        this.current_page = 0;
         this.type = type;
+        this.login_status = false;
         return (async () => {
             this.core = await core;
             return this
@@ -130,6 +134,7 @@ class Weibo {
                         }).catch(error => {
                             logger.debug("登录成功后获取cookies失败")
                         })
+                        this.login_status = true;
                         tempTag = true;
                     }
                 } else {
@@ -138,13 +143,64 @@ class Weibo {
             }
         } else {
             logger.debug("已登录");
+            this.login_status = true;
             tempTag = true;
             //    ....
         }
         return tempTag
     }
 
+    async _search_keyword(keyword) {
+        logger.debug("查询关键词");
+        await this.core.page.focus('.search-input>input');
+        await this.core.page.keyboard.sendCharacter(keyword);
+        await this.core.page.click('.s-btn-b')
+        // await this.core.page.screenshot({path: 'example.png'});
+    }
+    // 提取信息
+    async _extract_info() {
+        // 提取信息块
+        this.current_page++
+        if (this.current_page <= this.total) {
+            logger.debug(`当前第${this.current_page}页`);
+            const divs = await this.core.page.$$eval('.card-wrap', divs => {
+                return divs.map(div => {
+                    return div.outerHTML
+                })
+            });
+            // 解析信息 ***** 正文解析html，对标题正文都解析不到的抛弃
+            for (let item of divs) {
+                let $ = cheerio.load(item, {decodeEntities: false});
+                let tag = $('.card-top h4 a').text();
+                let title = $('.card>.card-feed>.content>.info>div>a[class=name]').text();
+                let content = $('.card>.card-feed>.content>p[node-type=feed_list_content_full]').html() || $('.card>.card-feed>.content>p[node-type=feed_list_content]').html();
+                let comment = $('.card>.card-act li:nth-last-child(2)').text();
+                let like = $('.card>.card-act li:nth-last-child(1)').text();
+                let share = $('.card>.card-act li:nth-last-child(3)').text();
+                // 获取到内容进行的处理
+                if (!!title && !!content) console.debug(tag, title, content, comment, like, share)
+            }
+
+            // 下一页
+            let nextPage = await this.core.page.waitForXPath('//a[@class="next"]');
+            await Promise.all([
+                nextPage.click(),
+                this.core.page.waitForNavigation()
+            ]);
+            await this._extract_info()
+        } else {
+            this.core.browser.close();
+            process.exit()
+        }
+    }
+    // 关键词搜索爬取
+    async keyword_search(keyword,total=0){
+        if(total) this.total = total
+        await this._search_keyword(keyword);
+        await this._extract_info();
+    }
 }
 
 
-module.exports = new Weibo(config.username, config.password, 'https://s.weibo.com/?Refer=', 'search')
+module.exports = new Weibo(config.username, config.password, 'https://s.weibo.com/?Refer=', 'search', 10)
+

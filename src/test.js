@@ -1,16 +1,14 @@
-let weibo = require('./weibo');
-const log4js = require('log4js');
-let logger = log4js.getLogger();
-// 日志级别
-logger.level = 'debug';
-async function main() {
-    logger.debug("主函数运行");
-    let weibo = await weibo
-    let login_status = await weibo.login();
-    if (login_status) {
-        console.log("登录成功")
-        weibo.core.browser.close();
-    }
-}
+const puppeteer = require('puppeteer');
 
-main()
+(async () => {
+    const browser = await puppeteer.launch({headless: false});
+    const page = await browser.newPage();
+    const page1 = await browser.newPage();
+    const page2 = await browser.newPage();
+    await page.goto('http://www.baidu.com');
+    await page1.goto('http://www.baidu.com');
+    await page2.goto('http://www.baidu.com');
+    await page.screenshot({path: 'example.png'});
+
+    await browser.close();
+})();

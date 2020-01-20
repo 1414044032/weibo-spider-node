@@ -150,14 +150,16 @@ class Weibo {
         return tempTag
     }
 
+    // 搜索点击逻辑相同
     async _search_keyword(keyword) {
-        logger.debug("查询关键词");
+        logger.debug("输入关键词搜索");
         await this.core.page.focus('.search-input>input');
         await this.core.page.keyboard.sendCharacter(keyword);
         await this.core.page.click('.s-btn-b')
         // await this.core.page.screenshot({path: 'example.png'});
     }
-    // 提取信息
+
+    // 提取搜索综合信息
     async _extract_info() {
         // 提取信息块
         this.current_page++
@@ -171,6 +173,7 @@ class Weibo {
             // 解析信息 ***** 正文解析html，对标题正文都解析不到的抛弃
             for (let item of divs) {
                 let $ = cheerio.load(item, {decodeEntities: false});
+                let mid = $('.card-wrap').attr('mid');
                 let tag = $('.card-top h4 a').text();
                 let title = $('.card>.card-feed>.content>.info>div>a[class=name]').text();
                 let content = $('.card>.card-feed>.content>p[node-type=feed_list_content_full]').html() || $('.card>.card-feed>.content>p[node-type=feed_list_content]').html();
@@ -178,7 +181,7 @@ class Weibo {
                 let like = $('.card>.card-act li:nth-last-child(1)').text();
                 let share = $('.card>.card-act li:nth-last-child(3)').text();
                 // 获取到内容进行的处理
-                if (!!title && !!content) console.debug(tag, title, content, comment, like, share)
+                if (!!title && !!content) console.debug(mid, tag, title, content, comment, like, share)
             }
 
             // 下一页
@@ -193,11 +196,60 @@ class Weibo {
             process.exit()
         }
     }
+
+    // 提取搜索找人信息
+    async _extract_user() {
+        // 提取信息块
+        this.current_page++
+        if (this.current_page <= this.total) {
+            logger.debug(`当前第${this.current_page}页`);
+            const divs = await this.core.page.$$eval('#pl_user_feedList >div', divs => {
+                return divs.map(div => {
+                    return div.outerHTML
+                })
+            });
+            // 解析信息 ***** 用户信息解析
+            for (let item of divs) {
+                let $ = cheerio.load(item, {decodeEntities: false});
+                let avator = $('.avator img').attr('src');
+                let username = $('.info>div>a:nth-child(1)').html();
+                let user_info = $('.info>p:nth-child(1)').html();
+                let user_other = $('.info>p:nth-child(2)').html();
+                let user_desc = $('.info>p:nth-child(3)').text();
+                let user_tag = $('.info>p:nth-child(4)').html();
+                let user_edu = $('.info>p:nth-child(5)').html();
+                let user_com = $('.info>p:nth-child(6)').html();
+                // 获取到内容进行的处理
+                console.debug(username, user_info, user_desc, user_tag, user_edu, user_com)
+            }
+
+            // 下一页
+            let nextPage = await this.core.page.waitForXPath('//a[@class="next"]');
+            await Promise.all([
+                nextPage.click(),
+                this.core.page.waitForNavigation()
+            ]);
+            await this._extract_user()
+        } else {
+            this.core.browser.close();
+            process.exit()
+        }
+    }
+
     // 关键词搜索爬取
-    async keyword_search(keyword,total=0){
-        if(total) this.total = total
+    async keyword_search(keyword, total = 0) {
+        if (total) this.total = total
         await this._search_keyword(keyword);
         await this._extract_info();
+    }
+
+    // 用户搜索爬取
+    async user_search(keyword, total = 0) {
+        if (total) this.total = total
+        //进入找人搜索页
+        await this.goto_url('https://s.weibo.com/user')
+        await this._search_keyword(keyword);
+        await this._extract_user();
     }
 }
 

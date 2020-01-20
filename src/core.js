@@ -1,4 +1,3 @@
-const AsyncConstructor = require('async-constructor').AsyncConstructor
 const puppeteer = require('puppeteer');
 const log4js = require('log4js');
 const cheerio = require('cheerio');

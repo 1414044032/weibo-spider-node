@@ -8,7 +8,7 @@ let logger = log4js.getLogger();
 logger.level = 'debug';
 
 class Weibo {
-    constructor(username, password, start_url, type = 'search', total = 2) {
+    constructor(username, password, start_url, type = 'search', total = 1000) {
         // 用户名
         this.username = username;
         // 密码
@@ -117,7 +117,7 @@ class Weibo {
 
     // 登录
     async login() {
-        await this.goto_url('https://s.weibo.com/?Refer=')
+        await this.goto_url('https://s.weibo.com')
         const text = await this._check_login();
         let tempTag = false;
         if (!!text) {
@@ -151,10 +151,15 @@ class Weibo {
     }
 
     // 搜索点击逻辑相同
-    async _search_keyword(keyword) {
-        logger.debug("输入关键词搜索");
+    async _search_keyword(keyword, type = null) {
+        logger.debug(`输入${keyword}进行搜索`);
         await this.core.page.focus('.search-input>input');
+        // await this.core.page.$eval('',input => input.value=keyword);
         await this.core.page.keyboard.sendCharacter(keyword);
+        if (type){
+            let typeBtn = await this.core.page.waitForXPath(`//a[@action-data="type=${type}"]`);
+            typeBtn.click();
+        }
         await this.core.page.click('.s-btn-b')
         // await this.core.page.screenshot({path: 'example.png'});
     }
@@ -236,6 +241,114 @@ class Weibo {
         }
     }
 
+    // 提取搜索文章信息
+    async _extract_article() {
+        // 提取信息块
+        this.current_page++
+        if (this.current_page <= this.total) {
+            logger.debug(`当前第${this.current_page}页`);
+            const divs = await this.core.page.$$eval('.card-wrap', divs => {
+                return divs.map(div => {
+                    return div.outerHTML
+                })
+            });
+            // 解析信息 ***** 文章信息解析
+            for (let item of divs) {
+                let $ = cheerio.load(item, {decodeEntities: false});
+                let title = $('h3>a').html();
+                let uri = $('h3>a').attr('href');
+                let pic = $('.pic img').attr('src');
+                // 消息摘要
+                let content = $('.detail>.txt').html();
+                // 来源
+                let author = $('.act>div>span:nth-child(1)').html();
+                // 时间
+                let create_time = $('.act>div>span:nth-child(2)').text();
+                // 其他信息
+                let info_other = $('.act>ul').text();
+                // 获取到内容进行的处理
+                console.debug(title, uri, pic, content, author, create_time, info_other)
+            }
+
+            // 下一页
+            let nextPage = await this.core.page.waitForXPath('//a[@class="next"]');
+            await Promise.all([
+                nextPage.click(),
+                this.core.page.waitForNavigation()
+            ]);
+            await this._extract_article()
+        } else {
+            this.core.browser.close();
+            process.exit()
+        }
+    }
+
+    //滚动到底
+    async _autoScroll() {
+        return this.core.page.evaluate(() => {
+            return new Promise((resolve, reject) => {
+                //滚动的总高度
+                let totalHeight = 0;
+                //每次向下滚动的高度 100 px
+                let distance = 500;
+                let timer = setInterval(() => {
+                    //页面的高度 包含滚动高度
+                    let scrollHeight = document.body.scrollHeight;
+                    //滚动条向下滚动 distance
+                    window.scrollBy(0, distance);
+                    totalHeight += distance;
+                    //当滚动的总高度 大于 页面高度 说明滚到底了。也就是说到滚动条滚到底时，以上还会继续累加，直到超过页面高度
+                    if (totalHeight >= scrollHeight) {
+                        clearInterval(timer);
+                        resolve(true);
+                    }
+                }, 200);
+            })
+        });
+    }
+    //提取用户所有微博
+    async _extract_user_detail(){
+        // 提取信息块
+        this.current_page++
+        if (this.current_page <= this.total) {
+            logger.debug(`当前第${this.current_page}页`);
+            // 滚动到底
+            await this._autoScroll();
+            const divs = await this.core.page.$$eval('div[action-type=feed_list_item]', divs => {
+                return divs.map(div => {
+                    return div.outerHTML
+                })
+            });
+            // 解析信息 ***** 微博信息解析
+            for (let item of divs) {
+                let $ = cheerio.load(item, {decodeEntities: false});
+                console.debug($('div').attr('class', 'WB_cardwrap').attr('class', 'WB_feed_like').html())
+                let mid = $('div').attr('class', 'WB_cardwrap').attr('class', 'WB_feed_like').attr('mid')
+                let content= $('div').attr('node-type','feed_list_content').html();
+                let other_info=$('.WB_row_line').attr('class','WB_row_r4').html();
+                // 获取到内容进行的处理
+                console.debug(mid, content, other_info)
+            }
+
+            // 下一页page next S_txt1 S_line1
+            let nextPage = await this.core.page.waitForXPath('//a[contains(@class,"page") and contains(@class,"next") ' +
+                'and contains(@class,"S_txt1") and contains(@class,"S_line1")]',{hidden :true});
+            if(nextPage){
+                await Promise.all([
+                    nextPage.click(),
+                    this.core.page.waitForNavigation()
+                ]);
+                await this._extract_user_detail()
+            }else {
+                this.core.browser.close();
+                process.exit()
+            }
+        } else {
+            this.core.browser.close();
+            process.exit()
+        }
+    }
+
     // 关键词搜索爬取
     async keyword_search(keyword, total = 0) {
         if (total) this.total = total
@@ -247,12 +360,27 @@ class Weibo {
     async user_search(keyword, total = 0) {
         if (total) this.total = total
         //进入找人搜索页
-        await this.goto_url('https://s.weibo.com/user')
-        await this._search_keyword(keyword);
+        await this._search_keyword(keyword,'user');
         await this._extract_user();
+    }
+
+    // 文章搜索爬取
+    async article_search(keyword, total = 0) {
+        if (total) this.total = total
+        //进入文章搜索页
+        await this._search_keyword(keyword,'article');
+        await this._extract_article();
+    }
+
+    // 用户微博爬取
+    async user_detail(uri, total = 0) {
+        if (total) this.total = total
+        //进入文章搜索页
+        await this.goto_url(uri);
+        await this._extract_user_detail();
     }
 }
 
 
-module.exports = new Weibo(config.username, config.password, 'https://s.weibo.com/?Refer=', 'search', 10)
+module.exports = new Weibo(config.username, config.password, 'https://s.weibo.com', 'search', 10)
 

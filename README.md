@@ -13,11 +13,11 @@ windows 10
 
 2. config.js  //配置微博账号，密码，浏览器模式
 
-3. node searh_keyword_spider.js //微博关键词爬取
+3. node searh_keyword_spider.js //微博（综合）关键词爬取
 
-4. 博主微博爬取 （待开发）
-
-5. 热门微博爬取 （待开发）
+   node search_user_spider.js //微博（用户）关键词爬取
+   
+   node search_article_spider.js //微博（用户）关键词爬取
 
 ## 版本内容更新
 

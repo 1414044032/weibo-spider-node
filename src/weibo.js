@@ -163,7 +163,13 @@ class Weibo {
         await this.core.page.click('.s-btn-b')
         // await this.core.page.screenshot({path: 'example.png'});
     }
-
+    sleep(time = 0) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve();
+            }, time);
+        })
+    }
     // 提取搜索综合信息
     async _extract_info() {
         // 提取信息块
@@ -175,6 +181,13 @@ class Weibo {
                     return div.outerHTML
                 })
             });
+            await this.sleep(3000)
+            // 点击评论 让评论显示出来
+            const commentArr = await this.core.page.$$('div.card-act > ul > li:nth-child(3)');
+            for(let item of commentArr){
+                let comment = await item.$('a')
+                await comment.click()
+            }
             // 解析信息 ***** 正文解析html，对标题正文都解析不到的抛弃
             for (let item of divs) {
                 let $ = cheerio.load(item, {decodeEntities: false});

@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e948595-cf92-4755-9579-e69a30c2617c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/search_article_spider.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cookies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/cookies.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weibo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/weibo.js" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,108 +14,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="n#!!block;n#extract_info#0" />
-                <element signature="n#!!block;n#save_cookies#0" />
-                <element signature="n#!!block;n#read_cookies#0" />
-                <element signature="n#!!block;n#set_cookies#0" />
-                <element signature="n#!!block;n#login_weibo_username#0" />
-                <element signature="n#!!block;n#login#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user_detail_spider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/core.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/weibo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="61" column="30" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="30" />
-              <folding>
-                <element signature="n#!!block;n#save_cookies#0;n#Weibo#0" />
-                <element signature="n#!!block;n#set_cookies#0;n#Weibo#0" />
-                <element signature="n#!!block;n#_login_weibo_username#0;n#Weibo#0" />
-                <element signature="n#!!block;n#_check_login#0;n#Weibo#0" />
-                <element signature="n#!!block;n#_extract_info#0;n#Weibo#0" />
-                <element signature="n#!!block;n#_extract_user#0;n#Weibo#0" />
-                <element signature="n#!!block;n#_extract_user#1;n#Weibo#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/search_user_spider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="9" column="41" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/search_article_spider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/searh_keyword_spider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="9" column="44" lean-forward="true" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#3;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -128,64 +21,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>login_weibo</find>
-      <find>评论</find>
-      <find>page</find>
-      <find>read_cookies</find>
-      <find>login</find>
-      <find>check_login</find>
-      <find>login_weibo_cookies</find>
-      <find>login_weibo_username</find>
-      <find>start_url</find>
-      <find>extract_info</find>
-      <find>search_keyword</find>
-      <find>登录成功</find>
-      <find>goto_url</find>
-      <find>cookie不存在</find>
-      <find>scr</find>
-      <find>__dirname</find>
-      <find>keyword_search</find>
-      <find>user_search</find>
-      <find>waitForXPath</find>
-      <find>_search_keyword</find>
-      <find>https://s.weibo.com/?Refer=</find>
-      <find>undefined</find>
-      <find>进行搜索</find>
-      <find>WB_feed_like</find>
-      <find>_extract_user_detail</find>
-      <find>feed_list_item</find>
-      <find>WB_detail</find>
-      <find>DEBUG</find>
-      <find>user_detail</find>
-      <find>_login_weibo_cookies</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>_login_weibo_cookies</replace>
-      <replace>_search_keyword</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/main.js" />
-        <option value="$PROJECT_DIR$/src/test1.js" />
-        <option value="$PROJECT_DIR$/src/searh_keyword_spider.js" />
-        <option value="$PROJECT_DIR$/src/config.js" />
-        <option value="$PROJECT_DIR$/src/core.js" />
-        <option value="$PROJECT_DIR$/src/search_user_spider.js" />
-        <option value="$PROJECT_DIR$/src/search_article_spider.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/test.js" />
-        <option value="$PROJECT_DIR$/src/user_detail_spider.js" />
-        <option value="$PROJECT_DIR$/src/weibo.js" />
-      </list>
-    </option>
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -193,46 +30,21 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1" />
-    <option name="y" value="30" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
-  </component>
+  <component name="ProjectId" id="1d7C7e3nVi1bfFn5Vz4qIQpNFZ7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="weibo-spider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weibo-spider-node" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weibo-spider" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weibo-spider-node" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -241,19 +53,7 @@
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="ts.external.directory.path" value="D:\Program Files\JetBrains\IntelliJ IDEA 2019.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Node.js.user_detail_spider.js">
+  <component name="RunManager" selected="Node.js.searh_keyword_spider.js">
     <configuration name="search_article_spider.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="search_article_spider.js" working-dir="$PROJECT_DIR$/src">
       <method v="2" />
     </configuration>
@@ -278,11 +78,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.searh_keyword_spider.js" />
+        <item itemvalue="Node.js.search_article_spider.js" />
         <item itemvalue="Node.js.user_detail_spider.js" />
         <item itemvalue="Node.js.test.js" />
-        <item itemvalue="Node.js.search_article_spider.js" />
         <item itemvalue="Node.js.search_user_spider.js" />
-        <item itemvalue="Node.js.searh_keyword_spider.js" />
       </list>
     </recent_temporary>
   </component>
@@ -300,6 +100,7 @@
       <workItem from="1579396268339" duration="186000" />
       <workItem from="1579396822224" duration="25208000" />
       <workItem from="1579482063473" duration="14825000" />
+      <workItem from="1591766580052" duration="4420000" />
     </task>
     <task id="LOCAL-00001" summary="解耦==》实现core 1:封装puppeeer.微博:自动登录.抽离公共方法">
       <created>1579422611038</created>
@@ -332,46 +133,6 @@
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59981000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.17836677" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="npm" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.7021563" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4528302" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.39757413" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32974428" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="TypeScript" order="12" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="BPMNPalette" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="RestServices" order="10" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -382,220 +143,79 @@
     <MESSAGE value="用户搜索爬取完成" />
     <option name="LAST_COMMIT_MESSAGE" value="用户搜索爬取完成" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1120">
-          <caret line="4868" column="4" selection-start-line="4868" selection-start-column="4" selection-end-line="4868" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/cheerio/lib/static.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/async-constructor/src/append-async-constructor.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/async-constructor/src/async-constructor.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="50" lean-forward="true" selection-start-column="50" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/puppeteer/lib/FrameManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="404" column="8" selection-start-line="404" selection-start-column="8" selection-end-line="404" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/12.13.0/node-typings/node_modules/@types/node/globals.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="777" column="8" selection-start-line="777" selection-start-column="8" selection-end-line="777" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weibo-spider-node.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cookies.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/ts3.2/fs.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/puppeteer/lib/Browser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="164" column="8" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/example.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/searh_keyword_spider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="9" column="44" lean-forward="true" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/search_article_spider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="160">
-            <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/search_user_spider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="9" column="41" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/puppeteer/lib/Launcher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1210">
-          <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/puppeteer/lib/Puppeteer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/puppeteer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="n#!!block;n#extract_info#0" />
-            <element signature="n#!!block;n#save_cookies#0" />
-            <element signature="n#!!block;n#read_cookies#0" />
-            <element signature="n#!!block;n#set_cookies#0" />
-            <element signature="n#!!block;n#login_weibo_username#0" />
-            <element signature="n#!!block;n#login#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/cheerio/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/cheerio/lib/api/attributes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="161" column="4" selection-start-line="161" selection-start-column="4" selection-end-line="161" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#3;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/user_detail_spider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/weibo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="30" />
-          <folding>
-            <element signature="n#!!block;n#save_cookies#0;n#Weibo#0" />
-            <element signature="n#!!block;n#set_cookies#0;n#Weibo#0" />
-            <element signature="n#!!block;n#_login_weibo_username#0;n#Weibo#0" />
-            <element signature="n#!!block;n#_check_login#0;n#Weibo#0" />
-            <element signature="n#!!block;n#_extract_info#0;n#Weibo#0" />
-            <element signature="n#!!block;n#_extract_user#0;n#Weibo#0" />
-            <element signature="n#!!block;n#_extract_user#1;n#Weibo#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state width="696" height="466" key="DebuggerActiveHint" timestamp="1591768438150">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="696" height="466" key="DebuggerActiveHint/0.0.1536.834@0.0.1536.834" timestamp="1591768438150" />
+    <state width="1515" height="326" key="GridCell.Tab.0.bottom" timestamp="1591770759380">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591770759380" />
+    <state width="1515" height="326" key="GridCell.Tab.0.center" timestamp="1591770759380">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591770759380" />
+    <state width="1515" height="326" key="GridCell.Tab.0.left" timestamp="1591770759380">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591770759380" />
+    <state width="1515" height="326" key="GridCell.Tab.0.right" timestamp="1591770759380">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591770759380" />
+    <state width="1515" height="326" key="GridCell.Tab.1.bottom" timestamp="1591770759381">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591770759381" />
+    <state width="1515" height="326" key="GridCell.Tab.1.center" timestamp="1591770759381">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1591770759381" />
+    <state width="1515" height="326" key="GridCell.Tab.1.left" timestamp="1591770759380">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1591770759380" />
+    <state width="1515" height="326" key="GridCell.Tab.1.right" timestamp="1591770759381">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1591770759381" />
+    <state width="1515" height="326" key="GridCell.Tab.2.bottom" timestamp="1591770759381">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591770759381" />
+    <state width="1515" height="326" key="GridCell.Tab.2.center" timestamp="1591770759381">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1591770759381" />
+    <state width="1515" height="326" key="GridCell.Tab.2.left" timestamp="1591770759381">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1591770759381" />
+    <state width="1515" height="326" key="GridCell.Tab.2.right" timestamp="1591770759381">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1591770759381" />
+    <state width="1515" height="326" key="GridCell.Tab.3.bottom" timestamp="1591770759381">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.3.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591770759381" />
+    <state width="1515" height="326" key="GridCell.Tab.3.center" timestamp="1591770759381">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.3.center/0.0.1536.834@0.0.1536.834" timestamp="1591770759381" />
+    <state width="1515" height="326" key="GridCell.Tab.3.left" timestamp="1591770759381">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.3.left/0.0.1536.834@0.0.1536.834" timestamp="1591770759381" />
+    <state width="1515" height="326" key="GridCell.Tab.3.right" timestamp="1591770759381">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1515" height="326" key="GridCell.Tab.3.right/0.0.1536.834@0.0.1536.834" timestamp="1591770759381" />
+    <state x="447" y="150" width="642" height="534" key="find.popup" timestamp="1591768278816">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="447" y="150" width="642" height="534" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1591768278816" />
   </component>
   <component name="masterDetails">
     <states>

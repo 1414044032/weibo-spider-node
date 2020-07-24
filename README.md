@@ -26,3 +26,5 @@ windows 10
 2. 微博自动登录完成
 
 3. 关键词爬取完成
+
+## 点击链接加入QQ群聊【adb，python，打卡，scrapy】：https://jq.qq.com/?_wv=1027&k=5nRUMwZR
